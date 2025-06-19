@@ -39,7 +39,7 @@ export default function DateLocation() {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.4 }}
-          href="https://map.kakao.com/link/map/포레스트원웨딩"
+          href="https://naver.me/GplXTcqB"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 inline-block px-8 py-2 rounded-full bg-gradient-to-r from-[#ffe8cf] to-[#d8b4a0] text-[#6d4635] font-bold shadow hover:scale-105 transition"
