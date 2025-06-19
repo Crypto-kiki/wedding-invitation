@@ -1,14 +1,52 @@
+"use client";
+import { FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 export default function DateLocation() {
   return (
-    <section className="py-12 text-center">
-      <h2 className="text-2xl font-semibold mb-4">결혼식 정보</h2>
-      <p className="mb-2">2025년 9월 14일 오전 11시 30분</p>
-      <p className="mb-4">포레스트원웨딩 4층 포레스트 홀</p>
-      {/* <img
-        src="/images/venue_map.png"
-        alt="지도"
-        className="mx-auto w-4/5 rounded-lg shadow-md"
-      /> */}
+    <section className="py-10 px-4 w-full max-w-md flex flex-col items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        viewport={{ once: true, amount: 0.4 }}
+        className="bg-white/80 rounded-2xl shadow-xl p-7 w-full flex flex-col items-center border border-[#ecd8c1] backdrop-blur-[1px]"
+      >
+        <h2 className="text-xl font-bold mb-3 text-[#b18463] font-serif tracking-wide">
+          예식 안내
+        </h2>
+        <div className="flex items-center gap-2 mb-1 text-[#be8c62]">
+          <FaCalendarAlt className="text-base" />
+          <span className="text-base font-semibold">
+            2025년 9월 14일 (일) 오전 11시 30분
+          </span>
+        </div>
+        <div className="flex items-center gap-2 mb-2 text-[#be8c62]">
+          <FaMapMarkerAlt className="text-base" />
+          <span className="text-base font-medium">
+            포레스트원웨딩 4층 포레스트 홀
+          </span>
+        </div>
+        <motion.img
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.18 }}
+          src="/images/venue_map.png"
+          alt="웨딩홀 지도"
+          className="rounded-xl shadow border mt-4 mb-2 w-full max-w-[330px] object-cover"
+        />
+        <motion.a
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.18, duration: 0.4 }}
+          href="https://map.kakao.com/link/map/포레스트원웨딩"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-block px-8 py-2 rounded-full bg-gradient-to-r from-[#ffe8cf] to-[#d8b4a0] text-[#6d4635] font-bold shadow hover:scale-105 transition"
+        >
+          지도 바로가기
+        </motion.a>
+      </motion.div>
     </section>
   );
 }
