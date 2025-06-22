@@ -1,8 +1,10 @@
 "use client";
-import { FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function DateLocation() {
+  const { t } = useLanguage();
   return (
     <section className="py-10 px-4 w-full max-w-md flex flex-col items-center">
       <motion.div
@@ -13,18 +15,18 @@ export default function DateLocation() {
         className="bg-white/80 rounded-2xl shadow-xl p-7 w-full flex flex-col items-center border border-[#ecd8c1] backdrop-blur-[1px]"
       >
         <h2 className="text-xl font-bold mb-3 text-[#b18463] font-serif tracking-wide">
-          예식 안내
+          {t('weddingInfo')}
         </h2>
         <div className="flex items-center gap-2 mb-1 text-[#be8c62]">
           <FaCalendarAlt className="text-base" />
           <span className="text-base font-semibold">
-            2025년 9월 14일 (일) 오전 11시 30분
+            {t('ceremonyDate')}
           </span>
         </div>
         <div className="flex items-center gap-2 mb-2 text-[#be8c62]">
           <FaMapMarkerAlt className="text-base" />
           <span className="text-base font-medium">
-            포레스트원웨딩 4층 포레스트 홀
+            {t('venueLocation')}
           </span>
         </div>
         <motion.img
@@ -44,7 +46,7 @@ export default function DateLocation() {
           rel="noopener noreferrer"
           className="mt-4 inline-block px-8 py-2 rounded-full bg-gradient-to-r from-[#ffe8cf] to-[#d8b4a0] text-[#6d4635] font-bold shadow hover:scale-105 transition"
         >
-          지도 바로가기
+          {t('mapButton')}
         </motion.a>
       </motion.div>
     </section>

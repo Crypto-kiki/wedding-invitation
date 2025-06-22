@@ -1,14 +1,24 @@
 // src/components/PreviewGallery.tsx
 "use client";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaCamera } from "react-icons/fa";
+import { useLanguage } from "@/contexts/LanguageContext";
+import Masonry from 'react-masonry-css';
+import Link from 'next/link';
 
-const images = Array.from(
-  { length: 9 },
-  (_, i) => `/images/couple${i + 1}.jpg`
-);
+const images = [
+  { src: '/images/couple1.jpg', alt: '커플 사진 1' },
+  { src: '/images/couple2.jpg', alt: '커플 사진 2' },
+  { src: '/images/couple3.jpg', alt: '커플 사진 3' },
+  { src: '/images/couple4.jpg', alt: '커플 사진 4' },
+  { src: '/images/couple5.jpg', alt: '커플 사진 5' },
+  { src: '/images/couple6.jpg', alt: '커플 사진 6' },
+];
 
 export default function PreviewGallery() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-12 px-4 w-full flex flex-col items-center max-w-md">
       <motion.h2
@@ -18,14 +28,14 @@ export default function PreviewGallery() {
         viewport={{ once: true }}
         className="text-2xl font-serif font-bold text-[#b18463] mb-5"
       >
-        우리의 순간들
+        {t('ourMoments')}
       </motion.h2>
       <div className="grid grid-cols-3 gap-2 mb-6 w-full">
-        {images.map((src, idx) => (
+        {images.map((image, idx) => (
           <motion.img
-            key={src}
-            src={src}
-            alt={`preview${idx + 1}`}
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.36, delay: 0.03 * idx }}
@@ -44,7 +54,7 @@ export default function PreviewGallery() {
           href="/gallery"
           className="inline-flex items-center gap-2 px-7 py-2 rounded-full bg-gradient-to-r from-[#ffe8cf] to-[#d8b4a0] text-[#6d4635] font-semibold shadow hover:scale-105 transition"
         >
-          더 많은 사진 보기
+          {t('viewMorePhotos')}
         </Link>
       </motion.div>
     </section>

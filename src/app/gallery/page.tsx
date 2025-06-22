@@ -8,6 +8,7 @@ import "yet-another-react-lightbox/styles.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft } from "react-icons/fa";
 import Link from "next/link";
+import Image from 'next/image';
 
 const images = [
   "/images/couple1.jpg",
@@ -79,9 +80,11 @@ export default function GalleryPage() {
             viewport={{ once: true }}
             className="rounded-2xl bg-white/90 shadow-md overflow-hidden border border-[#ecd8c1] relative group"
           >
-            <img
+            <Image
               src={src}
               alt={`gallery-${i}`}
+              width={400}
+              height={500}
               className="w-full object-cover aspect-[4/5] max-h-[340px] cursor-pointer transition duration-150 group-hover:scale-105"
               onClick={() => setIndex(i)}
               loading="lazy"
