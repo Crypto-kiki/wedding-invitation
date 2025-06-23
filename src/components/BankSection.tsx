@@ -8,19 +8,19 @@ const accounts = [
     label: "신랑",
     name: "김백기",
     bank: "국민은행",
-    number: "123456-78-901234",
+    number: "000000-00-000000",
   },
   {
     label: "신랑측 어머니",
-    name: "박미영",
+    name: "오선숙",
     bank: "국민은행",
-    number: "234567-89-012345",
+    number: "000000-00-000000",
   },
   {
     label: "신랑측 아버지",
-    name: "김상현",
-    bank: "농협",
-    number: "345678-90-123456",
+    name: "김효중",
+    bank: "국민은행",
+    number: "000000-00-000000",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function BankSection() {
         viewport={{ once: true }}
         className="text-[1.15rem] font-serif font-bold text-[#b18463] mb-5 tracking-wide"
       >
-        신랑/신랑측 가족에게 마음 전하기
+        마음 전하기
       </motion.h2>
       <div className="w-full flex flex-col gap-3">
         {accounts.map((acc, idx) => (

@@ -28,19 +28,21 @@ export default function PreviewGallery() {
       >
         {t("ourMoments")}
       </motion.h2>
-      <div className="grid grid-cols-3 gap-2 mb-6 w-full">
-        {images.map((image, idx) => (
-          <motion.img
-            key={image.src}
-            src={image.src}
-            alt={image.alt}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.36, delay: 0.03 * idx }}
-            viewport={{ once: true }}
-            className="w-full aspect-square object-cover rounded-xl shadow ring-1 ring-[#ecd8c1] hover:scale-105 transition"
-          />
-        ))}
+      <div>
+        <Link href="gallery" className="grid grid-cols-3 gap-2 mb-6 w-full">
+          {images.map((image, idx) => (
+            <motion.img
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.36, delay: 0.03 * idx }}
+              viewport={{ once: true }}
+              className="w-full aspect-square object-cover rounded-xl shadow ring-1 ring-[#ecd8c1] hover:scale-105 transition"
+            />
+          ))}
+        </Link>
       </div>
       <motion.div
         initial={{ opacity: 0, y: 18 }}

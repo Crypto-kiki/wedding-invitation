@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import Hero from "@/components/Hero";
 import CoupleSection from "@/components/CoupleSection";
 import CountdownTimer from "@/components/CountdownTimer";
@@ -10,7 +11,16 @@ import LanguageToggle from "@/components/LanguageToggle";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center w-full min-h-screen bg-gradient-to-b from-[#fdf8f3] via-[#faf0e8] to-[#f5e6d3]">
+    <main
+      className="
+        w-full min-h-screen
+        flex flex-col items-center
+        bg-white/90 backdrop-blur-sm
+        p-6
+        rounded-2xl
+        shadow-lg
+      "
+    >
       <LanguageToggle />
       <Hero />
       <CoupleSection />
