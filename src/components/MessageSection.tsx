@@ -227,8 +227,8 @@ export default function MessageSection() {
           </motion.div>
         ) : (
           <>
-            <div className="grid gap-4 md:grid-cols-2">
-              {(showAll ? messages : messages.slice(0, 5)).map((msg, idx) => {
+            <div className="grid gap-4 md:grid-cols-1">
+              {(showAll ? messages : messages.slice(0, 4)).map((msg, idx) => {
                 const isLong = msg.message.length > limit;
                 const expanded = expandedIds.includes(msg.id);
                 const displayedText =
@@ -294,7 +294,7 @@ export default function MessageSection() {
               })}
             </div>
 
-            {messages.length > 5 && (
+            {messages.length > 4 && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -314,8 +314,8 @@ export default function MessageSection() {
                     <>
                       <span>
                         {language === "ko"
-                          ? `${messages.length - 5}개 더 보기`
-                          : `查看更多 (還有${messages.length - 5}則)`}
+                          ? `${messages.length - 4}개 더 보기`
+                          : `查看更多 (還有${messages.length - 4}則)`}
                       </span>
                       <FaChevronDown className="text-sm" />
                     </>
