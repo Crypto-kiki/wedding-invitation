@@ -1,4 +1,3 @@
-
 "use client";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -10,7 +9,7 @@ export default function Hero() {
     <section className="h-[80vh] min-h-[600px] w-full flex flex-col justify-center items-center text-center relative bg-[url('/images/hero.jpg')] bg-cover bg-center">
       {/* 오버레이 그라데이션 */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/40" />
-      
+
       {/* 텍스트 그룹 */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -18,11 +17,16 @@ export default function Hero() {
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 flex flex-col items-center w-full px-6"
       >
-        {/* 상단 장식 */}
+        {/* 상단 장식 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 100 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            type: "spring",
+            stiffness: 100,
+          }}
           className="mb-6"
         >
           <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent mb-4" />
@@ -31,6 +35,7 @@ export default function Hero() {
           </div>
           <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-white/60 to-transparent mt-4" />
         </motion.div>
+        */}
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -41,7 +46,7 @@ export default function Hero() {
             textShadow: "0 4px 20px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.3)",
           }}
         >
-          {t('weddingInvitation')}
+          {t("weddingInvitation")}
         </motion.h1>
 
         <motion.div
@@ -50,13 +55,17 @@ export default function Hero() {
           transition={{ delay: 0.7, duration: 0.6 }}
           className="mb-6"
         >
-          <p className="text-lg font-light text-white/90 mb-2"
-             style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}>
-            {t('groomBride')}
+          <p
+            className="text-lg font-light text-white/90 mb-2"
+            style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}
+          >
+            {t("groomBride")}
           </p>
-          <p className="text-base text-white/80 tracking-wide"
-             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
-            {t('weddingDate')}
+          <p
+            className="text-base text-white/80 tracking-wide"
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
+          >
+            {t("weddingDate")}
           </p>
         </motion.div>
 
@@ -67,11 +76,11 @@ export default function Hero() {
           className="bg-white/10 backdrop-blur-md rounded-2xl px-8 py-4 border border-white/20"
         >
           <p className="text-white text-center leading-relaxed font-light">
-            {t('heroMessage1')}
+            {t("heroMessage1")}
             <br />
-            {t('heroMessage2')}
+            {t("heroMessage2")}
             <br />
-            <span className="font-medium">{t('heroMessage3')}</span>
+            <span className="font-medium">{t("heroMessage3")}</span>
           </p>
         </motion.div>
       </motion.div>
