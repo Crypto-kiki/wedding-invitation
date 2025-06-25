@@ -32,7 +32,7 @@ export default function GalleryPage() {
   const [index, setIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full min-h-screen p-0 flex flex-col items-center bg-gradient-to-b from-[#f9e9dc] via-[#faece1] to-[#f7ece2] max-w-2xl mx-auto rounded-2xl">
+    <div className="w-full min-h-screen p-0 flex flex-col items-center bg-gradient-to-b from-[#f5e6d3] via-[#faece1] to-[#fdf8f3] max-w-2xl mx-auto rounded-2xl">
       {/* 상단 */}
       <div className="sticky top-0 z-20 w-full bg-gradient-to-b from-white/90 to-transparent py-4 mb-3 flex items-center px-4">
         <Link href="/invitation" className="mr-2">

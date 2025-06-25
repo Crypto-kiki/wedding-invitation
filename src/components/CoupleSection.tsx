@@ -17,7 +17,7 @@ export default function CoupleSection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+          <div className="flex items-center justify-center gap-8 md:gap-12">
             <div className="text-center">
               <h3 className="text-lg font-semibold text-[#b18463] mb-1">
                 {t("groom")}
