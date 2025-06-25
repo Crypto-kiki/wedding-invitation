@@ -23,7 +23,7 @@ export default function WelcomePage() {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "backOut" }}
+            transition={{ duration: 0.4, ease: "backOut" }}
             className="relative z-10 bg-white rounded-2xl p-8 shadow-2xl border border-white/50 backdrop-blur-md flex flex-col items-center"
           >
             <motion.span

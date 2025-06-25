@@ -31,7 +31,7 @@ export default function InvitationPage() {
         initial={{ opacity: 0, filter: "blur(6px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
         exit={{ opacity: 0, filter: "blur(6px)" }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 1.3, ease: "easeInOut" }}
         className="min-h-screen relative bg-white overflow-auto pb-12 px-4 pt-6 rounded-3xl"
       >
         <div className="max-w-xl mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg">
