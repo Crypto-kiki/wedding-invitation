@@ -17,7 +17,7 @@ export default function InvitationPage() {
   const [showConfetti, setShowConfetti] = useState(false);
   const { width, height } = useWindowSize();
 
-  // Optional: 페이지 진입 시 바로 컨페티
+  // 페이지 진입 시 컨페티
   useEffect(() => {
     setShowConfetti(true);
     const timer = setTimeout(() => setShowConfetti(false), 3000);
@@ -25,22 +25,31 @@ export default function InvitationPage() {
   }, []);
 
   return (
-    <div className="min-h-screen relative bg-white overflow-auto pb-12 px-4 pt-6 rounded-3xl">
-      <div className="max-w-xl mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg">
-        <LanguageToggle />
-        <Hero />
-        <CoupleSection />
-        <CountdownTimer />
-        <PreviewGallery />
-        <DateLocation />
-        <MessageSection />
-        <BankSection />
-        <Footer />
-      </div>
+    <AnimatePresence>
+      <motion.div
+        key="invitation"
+        initial={{ opacity: 0, filter: "blur(6px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        exit={{ opacity: 0, filter: "blur(6px)" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="min-h-screen relative bg-white overflow-auto pb-12 px-4 pt-6 rounded-3xl"
+      >
+        <div className="max-w-xl mx-auto bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg">
+          <LanguageToggle />
+          <Hero />
+          <CoupleSection />
+          <CountdownTimer />
+          <PreviewGallery />
+          <DateLocation />
+          <MessageSection />
+          <BankSection />
+          <Footer />
+        </div>
 
-      {showConfetti && (
-        <Confetti width={width} height={height} recycle={false} />
-      )}
-    </div>
+        {showConfetti && (
+          <Confetti width={width} height={height} recycle={false} />
+        )}
+      </motion.div>
+    </AnimatePresence>
   );
 }
