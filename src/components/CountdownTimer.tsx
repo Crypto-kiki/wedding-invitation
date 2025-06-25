@@ -1,4 +1,3 @@
-
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -23,7 +22,9 @@ export default function CountdownTimer() {
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
@@ -41,7 +42,7 @@ export default function CountdownTimer() {
   ];
 
   return (
-    <section className="w-full max-w-md px-4 py-8 flex flex-col items-center">
+    <section className="w-full max-w-md px-4 py-8 flex flex-col items-center mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +50,7 @@ export default function CountdownTimer() {
         viewport={{ once: true }}
         className="text-xl font-serif font-light text-[#b18463] mb-6 text-center tracking-wide"
       >
-        {t('specialDay')}
+        {t("specialDay")}
       </motion.h2>
 
       <motion.div

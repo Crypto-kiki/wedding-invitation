@@ -8,7 +8,7 @@ import "yet-another-react-lightbox/styles.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft } from "react-icons/fa";
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 
 const images = [
   "/images/couple1.jpg",
@@ -32,10 +32,10 @@ export default function GalleryPage() {
   const [index, setIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full min-h-screen px-0 py-0 flex flex-col items-center bg-gradient-to-b from-[#fdf6f0] via-[#faece1] to-[#f7ece2]">
+    <div className="w-full min-h-screen p-0 flex flex-col items-center bg-gradient-to-b from-[#f9e9dc] via-[#faece1] to-[#f7ece2] max-w-2xl mx-auto rounded-2xl">
       {/* 상단 */}
       <div className="sticky top-0 z-20 w-full bg-gradient-to-b from-white/90 to-transparent py-4 mb-3 flex items-center px-4">
-        <Link href="/" className="mr-2">
+        <Link href="/invitation" className="mr-2">
           <FaChevronLeft className="text-[#d8b4a0] text-lg" />
         </Link>
         <div className="flex-1 text-center">
@@ -68,7 +68,7 @@ export default function GalleryPage() {
       {/* Masonry 그리드 */}
       <Masonry
         breakpointCols={breakpointColumnsObj}
-        className="w-full flex gap-3 px-2"
+        className="w-full flex gap-3 p-2"
         columnClassName="space-y-3"
       >
         {images.map((src, i) => (
@@ -110,11 +110,9 @@ export default function GalleryPage() {
                 background: "rgba(36,23,12,0.93)",
                 zIndex: 50,
               },
-              // navigation: { color: "#fdf6f0" }, // 지원하지 않으니 삭제!
             }}
-            // animation={{ fade: { duration: 420 } }} // 지원하지 않으니 삭제!
             render={{
-              // 닫기버튼 직접 스타일링
+              // 닫기버튼 스타일링
               iconClose: () => (
                 <span className="absolute right-6 top-4 text-[22px] text-[#ecd8c1] font-bold z-50 bg-[#0005] rounded-full p-1.5 shadow-lg">
                   ×

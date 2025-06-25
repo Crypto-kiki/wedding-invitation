@@ -11,7 +11,7 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
       viewport={{ once: true }}
-      className="w-full max-w-md px-4 py-12 text-center"
+      className="w-full max-w-lg px-4 py-12 text-center mx-auto"
     >
       <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-8 border border-white/30">
         <div className="flex justify-center mb-4">
@@ -19,9 +19,9 @@ export default function Footer() {
         </div>
 
         <p className="text-[#8b6f52] text-base font-light leading-loose mb-4">
-          {t('preciousBeginning')}
+          {t("preciousBeginning")}
           <br />
-          {t('thankYouForBeing')}
+          {t("thankYouForBeing")}
         </p>
 
         <div className="text-sm text-[#a8916f] font-light">

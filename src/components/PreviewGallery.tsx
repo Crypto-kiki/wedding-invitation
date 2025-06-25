@@ -18,7 +18,7 @@ export default function PreviewGallery() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-12 px-4 w-full flex flex-col items-center max-w-md">
+    <section className="py-12 px-4 w-full flex flex-col items-center max-w-md mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}

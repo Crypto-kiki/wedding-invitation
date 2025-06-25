@@ -34,7 +34,7 @@ export default function BankSection() {
   };
 
   return (
-    <section className="w-full max-w-md px-4 py-10 flex flex-col items-center">
+    <section className="w-full max-w-md px-4 py-10 flex flex-col items-center mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
