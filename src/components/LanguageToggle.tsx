@@ -13,7 +13,7 @@ export default function LanguageToggle() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
-      className="fixed top-6 right-6 z-50 p-2"
+      className="fixed top-6 right-6 z-50"
     >
       <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-full shadow-lg border border-white/20 flex">
         <button

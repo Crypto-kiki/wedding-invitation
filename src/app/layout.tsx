@@ -45,7 +45,7 @@ export default function RootLayout({
           ${notoSerifKR.variable} ${inter.variable}
           font-sans antialiased
           max-w-2xl mx-auto
-          bg-gradient-to-b from-[#fdf8f3] via-[#faf0e8] to-[#f5e6d3] p-4
+          bg-gradient-to-b from-[#fdf8f3] via-[#faf0e8] to-[#f5e6d3] p-2
         `}
       >
         <LanguageProvider>{children}</LanguageProvider>
