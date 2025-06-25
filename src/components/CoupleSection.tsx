@@ -44,6 +44,21 @@ export default function CoupleSection() {
             <p className="text-[#8b6f52] leading-relaxed">
               {t("coupleMessage2")}
             </p>
+            <p className="text-[#8b6f52] leading-relaxed">
+              {t("coupleMessage3")}
+            </p>
+            <p className="text-[#8b6f52] leading-relaxed">
+              {t("coupleMessage4")}
+            </p>
+            <p className="text-[#8b6f52] leading-relaxed">
+              {t("coupleMessage5")}
+            </p>
+            <p className="text-[#8b6f52] leading-relaxed">
+              {t("coupleMessage6")}
+            </p>
+            <p className="text-[#8b6f52] leading-relaxed">
+              {t("coupleMessage7")}
+            </p>
           </div>
         </motion.div>
       </div>

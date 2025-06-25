@@ -1,7 +1,7 @@
 "use client";
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
-type Language = 'ko' | 'zh';
+type Language = "ko" | "zh";
 
 interface LanguageContextType {
   language: Language;
@@ -9,7 +9,9 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 const translations = {
   ko: {
@@ -26,8 +28,13 @@ const translations = {
     // Couple Section
     groom: "신랑",
     bride: "신부",
-    coupleMessage1: "소중한 분들을 모시고",
-    coupleMessage2: "새로운 시작을 함께하고자 합니다",
+    coupleMessage1: "서로가 마주보며 다져온 사랑을",
+    coupleMessage2: "이제 함께 한 곳을 바라보며",
+    coupleMessage3: "걸어갈 수 있는 큰 사랑으로 키우고자 합니다.",
+    coupleMessage4: "저희 두 사람이 사랑의 이름으로",
+    coupleMessage5: "지켜나갈 수 있게 앞날을",
+    coupleMessage6: "축복해 주시면 감사하겠습니다.",
+    coupleMessage7: "김백기, 여이페의 결혼식에 초대합니다.",
 
     // Countdown
     specialDay: "우리의 특별한 날까지",
@@ -35,7 +42,8 @@ const translations = {
     // Date & Location
     weddingInfo: "예식 안내",
     ceremonyDate: "2025년 9월 14일 (일) 오전 11시 30분",
-    venueLocation: "서울특별시 성북구 동소문로 47, 포레스트원웨딩 4층 포레스트 홀",
+    venueLocation:
+      "서울특별시 성북구 동소문로 47, 포레스트원웨딩 4층 포레스트 홀",
     venueAddress: "서울특별시 성북구 동소문로 47",
     mapButton: "지도로 보기",
 
@@ -50,7 +58,7 @@ const translations = {
     groomFamily: "신랑측",
     brideFamily: "신부측",
     fatherGroom: "아버지",
-    motherGroom: "어머니", 
+    motherGroom: "어머니",
     fatherBride: "아버지",
     motherBride: "어머니",
     copyAccount: "계좌복사",
@@ -68,21 +76,10 @@ const translations = {
     showMore: "더 보기",
     collapse: "접기",
 
-    // RSVP
-    attendanceConfirmation: "참석 여부 확인",
-    attendanceMessage: "소중한 자리에 함께해 주실 수 있는지 알려주세요",
-    name: "성함",
-    phoneNumber: "연락처",
-    willAttend: "참석합니다",
-    cannotAttend: "참석이 어렵습니다",
-    numberOfGuests: "동반 인원",
-    includeYourself: "본인 포함",
-    submitRSVP: "참석 여부 제출",
-
     // Footer
     thankYou: "감사합니다",
     preciousBeginning: "두 사람의 아름다운 시작을",
-    thankYouForBeing: "함께 축복해 주셔서 감사합니다"
+    thankYouForBeing: "함께 축복해 주셔서 감사합니다",
   },
   zh: {
     // Hero Section
@@ -98,8 +95,13 @@ const translations = {
     // Couple Section
     groom: "新郎",
     bride: "新娘",
-    coupleMessage1: "邀請珍貴的各位",
-    coupleMessage2: "一同見證我們的新開始",
+    coupleMessage1: "我們一路走來，在彼此的陪伴中建立了穩定的感情，",
+    coupleMessage2: "如今，決定攜手邁向人生的新篇章。",
+    coupleMessage3: "希望未來的日子裡，能夠相互扶持、一起成長，",
+    coupleMessage4: "把這份愛延續為一生的承諾。",
+    coupleMessage5: "誠摯邀請您來見證我們的重要時刻，",
+    coupleMessage6: "也懇請您為我們送上祝福，",
+    coupleMessage7: "讓這段旅程有您的陪伴與祝福更加圓滿。",
 
     // Countdown
     specialDay: "直到我們的特別日子",
@@ -140,29 +142,20 @@ const translations = {
     showMore: "查看更多",
     collapse: "收起",
 
-    // RSVP
-    attendanceConfirmation: "出席確認",
-    attendanceMessage: "請告訴我們您是否能參加這個重要的時刻",
-    name: "姓名",
-    phoneNumber: "聯絡電話",
-    willAttend: "我會出席",
-    cannotAttend: "無法出席",
-    numberOfGuests: "同行人數",
-    includeYourself: "包含本人",
-    submitRSVP: "提交出席確認",
-
     // Footer
     thankYou: "謝謝您",
     preciousBeginning: "兩人美麗的開始",
-    thankYouForBeing: "感謝您一同祝福"
-  }
+    thankYouForBeing: "感謝您一同祝福",
+  },
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('ko');
+  const [language, setLanguage] = useState<Language>("ko");
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations['ko']] || key;
+    return (
+      translations[language][key as keyof (typeof translations)["ko"]] || key
+    );
   };
 
   return (
@@ -175,7 +168,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
 }
