@@ -21,6 +21,18 @@ const images = [
   "/images/couple8.jpg",
   "/images/couple9.jpg",
   "/images/couple10.jpg",
+  "/images/couple11.jpg",
+  "/images/couple12.jpg",
+  "/images/couple13.jpg",
+  "/images/couple14.jpg",
+  "/images/couple15.jpg",
+  "/images/couple16.jpg",
+  "/images/couple17.jpg",
+  "/images/couple18.jpg",
+  "/images/couple19.jpg",
+  "/images/couple20.jpg",
+  "/images/couple21.jpg",
+  "/images/couple22.jpg",
 ];
 
 const breakpointColumnsObj = {

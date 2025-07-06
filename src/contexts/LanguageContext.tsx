@@ -37,7 +37,7 @@ const translations = {
     coupleMessage7: "김백기, 여이페의 결혼식에 초대합니다.",
 
     // Countdown
-    specialDay: "우리의 특별한 날까지",
+    specialDay: "D-day",
 
     // Date & Location
     weddingInfo: "예식 안내",
@@ -45,10 +45,11 @@ const translations = {
     venueLocation:
       "서울특별시 성북구 동소문로 47, 포레스트원웨딩 4층 포레스트 홀",
     venueAddress: "서울특별시 성북구 동소문로 47",
-    mapButton: "지도로 보기",
+    mapButtonNaver: "네이버 지도",
+    mapButtonGoogle: "구글 지도",
 
     // Gallery
-    ourMoments: "우리의 순간들",
+    ourMoments: "Gallery",
     viewMorePhotos: "더 많은 사진 보기",
     galleryDescription1: "평범한 날을 특별하게 만들어준",
     galleryDescription2: "소중한 추억들을 담았어요.",
@@ -104,17 +105,18 @@ const translations = {
     coupleMessage7: "讓這段旅程有您的陪伴與祝福更加圓滿。",
 
     // Countdown
-    specialDay: "直到我們的特別日子",
+    specialDay: "D-day",
 
     // Date & Location
     weddingInfo: "婚禮資訊",
     ceremonyDate: "2025年9月14日（日）上午11時30分",
     venueLocation: "首爾特別市城北區東小門路47, 森林園婚禮會館 4樓 森林廳",
     venueAddress: "首爾特別市城北區東小門路47",
-    mapButton: "地圖查看",
+    mapButtonNaver: "Naver Map",
+    mapButtonGoogle: "Google Map",
 
     // Gallery
-    ourMoments: "我們的時光",
+    ourMoments: "Gallery",
     viewMorePhotos: "查看更多照片",
     galleryDescription1: "讓平凡日子變得特別的",
     galleryDescription2: "珍貴回憶都收藏在這裡。",

@@ -12,6 +12,9 @@ const images = [
   { src: "/images/couple4.jpg", alt: "커플 사진 4" },
   { src: "/images/couple5.jpg", alt: "커플 사진 5" },
   { src: "/images/couple6.jpg", alt: "커플 사진 6" },
+  { src: "/images/couple7.jpg", alt: "커플 사진 7" },
+  { src: "/images/couple8.jpg", alt: "커플 사진 8" },
+  { src: "/images/couple9.jpg", alt: "커플 사진 9" },
 ];
 
 export default function PreviewGallery() {
