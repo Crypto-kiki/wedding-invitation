@@ -47,6 +47,7 @@ const translations = {
     venueAddress: "서울특별시 성북구 동소문로 47",
     mapButtonNaver: "네이버 지도",
     mapButtonGoogle: "구글 지도",
+    way: "대중교통 : 4호선 성신여대입구역 4번출구, 직진 500m. 도보 6분.",
 
     // Gallery
     ourMoments: "Gallery",
@@ -92,6 +93,7 @@ const translations = {
     heroMessage3: "請一同為我們祝福",
     venue: "森林園婚禮會館 4樓 森林廳",
     viewMap: "查看地圖",
+    way: "大眾交通：4號線誠信女大入口站4號出口，直走500公尺，步行約6分鐘。",
 
     // Couple Section
     groom: "新郎",

@@ -23,11 +23,15 @@ export default function DateLocation() {
           <span className="text-base font-semibold">{t("ceremonyDate")}</span>
         </div>
 
-        <div className="flex items-center gap-3 mb-5 text-[#b48c5c]">
-          <FaMapMarkerAlt className="text-lg" />
-          <span className="text-base font-medium">{t("venueLocation")}</span>
+        <div className="flex justify-center gap-3 mb-5 text-[#b48c5c]">
+          <div>
+            <FaMapMarkerAlt className="text-lg" />
+          </div>
+          <div className="font-medium">
+            <span className="text-base">{t("venueLocation")}</span>
+            <span className="inline-block text-xs">{t("way")}</span>
+          </div>
         </div>
-
         <motion.img
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
